@@ -3,7 +3,7 @@
  * @Author: YuShuXiao 949516815@qq.com
  * @Date: 2023-03-05 16:18:14
  * @LastEditors: YuShuXiao 949516815@qq.com
- * @LastEditTime: 2023-03-08 19:43:27
+ * @LastEditTime: 2023-03-08 21:59:13
  * @FilePath: \newssystem\src\router\routerConfig.jsx
  */
 
@@ -15,8 +15,8 @@ const Layout = lazy(() => import("../views/layout/OwnLayout"));
 const NotFound = lazy(() => import("../views/notFound/NotFound"));
 const Home = lazy(() => import("../views/layout/home/Home"));
 const UserList = lazy(() => import("../views/layout/user-manage/UserList"));
-const AuthorityList = lazy(() => import("../views/layout/authority-manage/AuthorityList"));
-const RolesList = lazy(() => import("../views/layout/authority-manage/RolesList"));
+const RightList = lazy(() => import("../views/layout/right-manage/RightList"));
+const RolesList = lazy(() => import("../views/layout/right-manage/RolesList"));
 
 export const routes = [
   { index: true, element: <Navigate to={"/home"} /> },
@@ -34,8 +34,8 @@ export const routes = [
     children: [
       { path: "/home", element: <Home /> },
       { path: "/user-manage/list",element:<UserList/> },
-      { path: "/authority-manage/authorityList",element:<AuthorityList/> },
-      { path: "/authority-manage/rolesList",element:<RolesList/> },
+      { path: "/right-manage/right/list",element:<RightList/> },
+      { path: "/right-manage/role/ist",element:<RolesList/> },
     ],
   },
 
