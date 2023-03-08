@@ -3,8 +3,8 @@
  * @Author: YuShuXiao 949516815@qq.com
  * @Date: 2023-03-05 14:09:42
  * @LastEditors: YuShuXiao 949516815@qq.com
- * @LastEditTime: 2023-03-06 10:52:41
- * @FilePath: \react practive\newssystem\src\router\index.jsx
+ * @LastEditTime: 2023-03-08 19:52:22
+ * @FilePath: \newssystem\src\router\index.jsx
  */
 
 import React, { Suspense } from "react";
@@ -21,7 +21,7 @@ export default function Router() {
     //   </Routes>
     //   <RouterConfig/>
     // </HashRouter>
-    <Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
       <HashRouter>
         <RouterConfig />
       </HashRouter>

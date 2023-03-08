@@ -3,20 +3,23 @@
  * @Author: YuShuXiao 949516815@qq.com
  * @Date: 2023-03-05 16:18:14
  * @LastEditors: YuShuXiao 949516815@qq.com
- * @LastEditTime: 2023-03-07 09:52:45
- * @FilePath: \react practive\newssystem\src\router\routerConfig.jsx
+ * @LastEditTime: 2023-03-08 19:43:27
+ * @FilePath: \newssystem\src\router\routerConfig.jsx
  */
 
 import { Navigate, useRoutes } from "react-router-dom";
 import { lazy } from "react";
 import { AuthWrapComponent } from "./authRoute";
 const Login = lazy(() => import("../views/login/Login"));
-const Layout = lazy(() => import("../views/layout/Layout"));
+const Layout = lazy(() => import("../views/layout/OwnLayout"));
 const NotFound = lazy(() => import("../views/notFound/NotFound"));
 const Home = lazy(() => import("../views/layout/home/Home"));
+const UserList = lazy(() => import("../views/layout/user-manage/UserList"));
+const AuthorityList = lazy(() => import("../views/layout/authority-manage/AuthorityList"));
+const RolesList = lazy(() => import("../views/layout/authority-manage/RolesList"));
 
 export const routes = [
-  { index:true, element: <Navigate to={"/home"} /> },
+  { index: true, element: <Navigate to={"/home"} /> },
   {
     path: "/login",
     element: <Login />,
@@ -28,10 +31,15 @@ export const routes = [
     meta: {
       title: "welcome😝",
     },
-    children: [{ path: "/home", element: <Home />},],
+    children: [
+      { path: "/home", element: <Home /> },
+      { path: "/user-manage/list",element:<UserList/> },
+      { path: "/authority-manage/authorityList",element:<AuthorityList/> },
+      { path: "/authority-manage/rolesList",element:<RolesList/> },
+    ],
   },
 
-  { path: "*",  element: <NotFound/>},
+  { path: "*", element: <NotFound /> },
 ];
 
 const dealRouters = (routes) => {

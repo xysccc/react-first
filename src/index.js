@@ -1,5 +1,14 @@
+/*
+ * @Description: 
+ * @Author: YuShuXiao 949516815@qq.com
+ * @Date: 2023-03-05 12:29:39
+ * @LastEditors: YuShuXiao 949516815@qq.com
+ * @LastEditTime: 2023-03-08 15:57:31
+ * @FilePath: \newssystem\src\index.js
+ */
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
 import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import Router from './router';
