@@ -3,7 +3,7 @@
  * @Author: YuShuXiao 949516815@qq.com
  * @Date: 2023-03-05 16:18:14
  * @LastEditors: YuShuXiao 949516815@qq.com
- * @LastEditTime: 2023-03-08 21:59:13
+ * @LastEditTime: 2023-03-09 19:35:34
  * @FilePath: \newssystem\src\router\routerConfig.jsx
  */
 
@@ -35,11 +35,13 @@ export const routes = [
       { path: "/home", element: <Home /> },
       { path: "/user-manage/list",element:<UserList/> },
       { path: "/right-manage/right/list",element:<RightList/> },
-      { path: "/right-manage/role/ist",element:<RolesList/> },
+      { path: "/right-manage/role/list",element:<RolesList/> },
+      { path: "*", element: <NotFound /> },
     ],
+   
   },
 
-  { path: "*", element: <NotFound /> },
+ 
 ];
 
 const dealRouters = (routes) => {

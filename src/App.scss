@@ -6,4 +6,20 @@ html,body,#root{
     width: 100%;
     height: 100%;
 }
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 10px
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: inherit;
+    border-radius: 8px;
+    background-clip: content-box;
+    border: 2px solid transparent
+}
+
+body[scroll],::-webkit-scrollbar-thumb {
+    background-color: #1677ff;
+    transition: 0s
+}
 @import 'antd/dist/reset.css'
