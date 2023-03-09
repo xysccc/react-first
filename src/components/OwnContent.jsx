@@ -3,7 +3,7 @@
  * @Author: YuShuXiao 949516815@qq.com
  * @Date: 2023-03-08 14:11:56
  * @LastEditors: YuShuXiao 949516815@qq.com
- * @LastEditTime: 2023-03-08 14:13:58
+ * @LastEditTime: 2023-03-09 23:29:39
  * @FilePath: \newssystem\src\components\OwnContent.jsx
  */
 import React from 'react'
@@ -15,7 +15,7 @@ export default function OwnContent() {
         token: { colorBgContainer },
       } = theme.useToken();
   return (
-    <>
+    <div className='content w-full h-full overflow-auto'>
      <Content
           style={{
             margin: '24px 16px',
@@ -26,6 +26,6 @@ export default function OwnContent() {
         >
           <Outlet/>
         </Content>
-    </>
+    </div>
   )
 }

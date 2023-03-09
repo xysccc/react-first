@@ -2,6 +2,7 @@
     height: 100%;
 }
 .anticon{
-    display: inline-flex;
-    align-items: center;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
