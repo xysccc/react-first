@@ -3,7 +3,7 @@
  * @Author: YuShuXiao 949516815@qq.com
  * @Date: 2023-03-07 08:32:24
  * @LastEditors: YuShuXiao 949516815@qq.com
- * @LastEditTime: 2023-03-08 17:27:50
+ * @LastEditTime: 2023-03-10 13:29:34
  * @FilePath: \newssystem\src\components\TopHeader.jsx
  */
 import React, { useState } from "react";
@@ -47,6 +47,8 @@ export default function TopHeader() {
         style={{
           padding: "0 30px 0 20px",
           background: colorBgContainer,
+          "flexShrink": 0,
+          height: "64px"
         }}
       >
         {collapsed ? (

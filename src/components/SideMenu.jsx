@@ -3,7 +3,7 @@
  * @Author: YuShuXiao 949516815@qq.com
  * @Date: 2023-03-07 08:31:27
  * @LastEditors: YuShuXiao 949516815@qq.com
- * @LastEditTime: 2023-03-09 23:23:03
+ * @LastEditTime: 2023-03-09 23:32:38
  * @FilePath: \newssystem\src\components\SideMenu.jsx
  */
 import React, { useState, useEffect } from "react";
@@ -101,7 +101,7 @@ export default function SideMenu() {
           <img src={Logo} alt="" />
         </a>
       </div>
-     <div className="flex-1 overflow-auto hah">
+     <div className="flex-1 overflow-auto">
      <Menu
         theme="dark"
         mode="inline"
