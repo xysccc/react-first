@@ -19,7 +19,12 @@ const { confirm } = Modal;
 
 export default function AuthorityList() {
   const [DataInfo, setDataInfo] = useState([]);
-  //columns  dataIndex和key 对应后端数据的属性名
+  useEffect(() => {
+    axios
+      .get("http://localhost:5000/rights?_embed=children")
+      .then(({ data }) => setDataInfo(filterChildren(data)));
+  }, []);
+  //  dataIndex 对应后端数据的属性名
 
   const columns = [
     {
@@ -107,11 +112,7 @@ export default function AuthorityList() {
           pagepermisson: item.pagepermisson,
         });
   };
-  useEffect(() => {
-    axios
-      .get("http://localhost:5000/rights?_embed=children")
-      .then(({ data }) => setDataInfo(filterChildren(data)));
-  }, []);
+
   return (
     <>
       <Table
