@@ -3,7 +3,7 @@
  * @Author: YuShuXiao 949516815@qq.com
  * @Date: 2023-03-07 08:31:27
  * @LastEditors: YuShuXiao 949516815@qq.com
- * @LastEditTime: 2023-03-09 23:32:38
+ * @LastEditTime: 2023-03-28 18:07:43
  * @FilePath: \newssystem\src\components\SideMenu.jsx
  */
 import React, { useState, useEffect } from "react";
@@ -95,7 +95,7 @@ export default function SideMenu() {
   return (
     <Sider trigger={null} collapsible collapsed={collapsed}>
       <div  className=" flex flex-col h-full w-full">
-      <div className="logo">
+      <div className="logo mb-2">
         <a href="#" title="树树后台管理系统">
           <p style={{ textIndent: "-9999px"}}>树树后台管理系统</p>
           <img src={Logo} alt="" />
